@@ -1,7 +1,8 @@
 import Link from "next/link";
 
 import classes from "./page.module.css";
-import ImageSlideshow from "@/components/main-header/Images/image-slideshow";
+import ImageSlideshow from "@/components/Images/image-slideshow";
+import { usePathname } from "next/navigation";
 
 const Home = () => {
   return (
@@ -50,6 +51,6 @@ const Home = () => {
       </main>
     </>
   );
-}
+};
 
 export default Home;
