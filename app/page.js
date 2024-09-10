@@ -1,8 +1,7 @@
 import Link from "next/link";
 
 import classes from "./page.module.css";
-import ImageSlideshow from "@/components/Images/image-slideshow";
-import { usePathname } from "next/navigation";
+import ImageSlideshow from "@/components/images/image-slideshow";
 
 const Home = () => {
   return (
