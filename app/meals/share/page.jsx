@@ -1,20 +1,10 @@
 import React from "react";
 import classes from "./page.module.css";
 import ImagePicker from "@/components/meals/image-picker";
+import { shareMeal } from "@/lib/actions";
 
 const SharePage = () => {
-  const shareMeal = async (formData) => {
-    "use server";
-
-    const meal = {
-      title: formData.get("title"),
-      summary: formData.get("summary"),
-      instructions: formData.get("instructions"),
-      image: formData.get("image"),
-      creator: formData.get("title"),
-      creator_email: formData.get("creator_email"),
-    };
-  };
+  
   return (
     <>
       <header className={classes.header}>
@@ -32,7 +22,7 @@ const SharePage = () => {
             </p>
             <p>
               <label htmlFor="email">Your email</label>
-              <input type="email" id="email" name="email" required />
+              <input type="email" id="email" name="creator_email" required />
             </p>
           </div>
           <p>
@@ -52,7 +42,7 @@ const SharePage = () => {
               required
             ></textarea>
           </p>
-          <ImagePicker />
+          <ImagePicker name='image' label='image'/>
           <p className={classes.actions}>
             <button type="submit">Share Meal</button>
           </p>
