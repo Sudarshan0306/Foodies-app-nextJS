@@ -14,7 +14,7 @@ const MealsPage = () => {
     <>
       <header className={classes.header}>
         <h1>
-          Delicious meals, created{" "}
+          Delicious meals, created
           <span className={classes.highlight}> by you </span>
         </h1>
         <p>Choose your favorite recipe and cook yourself. Its east and fun.</p>
